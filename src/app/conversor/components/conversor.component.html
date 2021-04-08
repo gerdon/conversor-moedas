@@ -1,0 +1,43 @@
+<br />
+<div class="alert alert-danger" role="alert">
+	Erro obtendo dados. Tente novamente.
+</div>
+
+<div class="card">
+	<div class="card-title text-center bg-success">
+		Selecione a moeda a ser convertida
+	</div>
+
+	<div class="card-body align-items-center d-flex justify-content-center">
+		<form class="form-inline">
+			<input 
+				type="text" 
+				name="valor" 
+				class="form-control text-right" 
+				placeholder="0" 
+				required>
+
+			<select 
+				name="moedaDe" 
+				class="form-control" 
+				required>
+				<option></option>
+			</select>
+			
+			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+
+			<select 
+				name="moedaPara" 
+				class="form-control" 
+				required>
+				<option>
+				</option>
+			</select>
+
+			<input 
+				type="submit" 
+				value="Converter" 
+				class="btn btn-success">
+		</form>
+	</div>
+</div>
