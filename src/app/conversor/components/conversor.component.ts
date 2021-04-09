@@ -56,8 +56,16 @@ export class ConversorComponent implements OnInit {
   	  this.conversorService
         .converter(this.conversao)
   	  	.subscribe(
-  		    response => {this.conversaoResponse = response; console.log(response);},
-          error => this.possuiErro = true
+  		    response => {
+            this.conversaoResponse = response;
+            console.log(response);
+
+            (!response.success) ? this.possuiErro = true : this.possuiErro = false;
+          },
+          error => {
+            this.possuiErro = true;
+            console.log("Error", error);
+          }
         );
   	}
   }

@@ -8,11 +8,13 @@ import { ConversorComponent } from './components/conversor.component';
 import { ConversorService } from './services/conversor.service';
 import { MoedaService } from './services/moeda.service';
 import { NumeroDirective } from './directives/numero.directive';
+import { ModalCotacaoComponent } from './utils/modal-cotacao.component';
 
 @NgModule({
   declarations: [
     ConversorComponent,
-    NumeroDirective
+    NumeroDirective,
+    ModalCotacaoComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,7 @@ import { NumeroDirective } from './directives/numero.directive';
     HttpClientModule
   ],
   exports: [
-    ConversorComponent
+    ConversorComponent,
   ],
   providers: [
     ConversorService,
